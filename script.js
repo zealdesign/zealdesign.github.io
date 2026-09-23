@@ -188,6 +188,14 @@ function buildArchive() {
 
   albumNav?.append(albumNavFragment);
   archiveGrid.append(fragment);
+
+  // Highlight album nav link on click
+  albumNav?.querySelectorAll("a").forEach((link) => {
+    link.addEventListener("click", () => {
+      albumNav.querySelectorAll("a").forEach((l) => l.classList.remove("is-active"));
+      link.classList.add("is-active");
+    });
+  });
 }
 
 buildArchive();
