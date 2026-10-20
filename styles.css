@@ -329,6 +329,13 @@ button {
   display: block;
 }
 
+#maker .intro-photo img {
+  aspect-ratio: auto;
+  max-height: none;
+  object-fit: contain;
+  object-position: center center;
+}
+
 .intro-text {
   display: flex;
   flex-direction: column;
